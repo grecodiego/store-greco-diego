@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/store-greco-diego/static/css/main.6c2a21f4.chunk.css",
-    "main.js": "/store-greco-diego/static/js/main.041cb2d0.chunk.js",
-    "main.js.map": "/store-greco-diego/static/js/main.041cb2d0.chunk.js.map",
+    "main.js": "/store-greco-diego/static/js/main.d1fba734.chunk.js",
+    "main.js.map": "/store-greco-diego/static/js/main.d1fba734.chunk.js.map",
     "runtime-main.js": "/store-greco-diego/static/js/runtime-main.210fd3a8.js",
     "runtime-main.js.map": "/store-greco-diego/static/js/runtime-main.210fd3a8.js.map",
     "static/js/2.7b46fae0.chunk.js": "/store-greco-diego/static/js/2.7b46fae0.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.210fd3a8.js",
     "static/js/2.7b46fae0.chunk.js",
     "static/css/main.6c2a21f4.chunk.css",
-    "static/js/main.041cb2d0.chunk.js"
+    "static/js/main.d1fba734.chunk.js"
   ]
 }
