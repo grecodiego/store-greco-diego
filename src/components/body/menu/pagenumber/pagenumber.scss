@@ -1,0 +1,22 @@
+.pagenumber {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    border: 1px solid #D9D9D9;
+    color: #D9D9D9;
+    font-size: 24px;
+    margin: 0 3px 0 3px;
+    padding: 18px;
+
+
+
+    &:hover {
+        color: #FFFFFF;
+        background: #0AD4FA;
+        transform: scale(1.2);
+    }
+}
