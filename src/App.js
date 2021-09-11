@@ -12,7 +12,7 @@ function App() {
 			<Banner/> 
 			<Main/>
 		</Route>
-		<Route path="/home" >
+		<Route path="/store-greco-diego/home" >
 			<Header/>
 			<Banner/> 
 			<Body/>
@@ -20,3 +20,4 @@ function App() {
 	</div>
 }
 export default App
+	
