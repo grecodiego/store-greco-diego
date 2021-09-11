@@ -40,7 +40,7 @@ export function Login() {
   }
 
   function goHome(){
-    setTimeout(()=>window.location.replace("/store-greco.diego/home"),3000)
+    setTimeout(()=>window.location.replace("/store-greco-diego/home"),3000)
     return "Login Success!!!"
   }
   return (
