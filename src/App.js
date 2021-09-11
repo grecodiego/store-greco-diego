@@ -12,7 +12,7 @@ function App() {
 			<Banner/> 
 			<Main/>
 		</Route>
-		<Route path="/store-greco-diego/home" >
+		<Route exact path="/store-greco-diego/home" >
 			<Header/>
 			<Banner/> 
 			<Body/>
