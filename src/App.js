@@ -1,6 +1,6 @@
 import './app.scss'
 import {Header} from "./components/header/header.jsx"
-import {Banner} from"./components/banner/banner.jsx"
+import {Banner} from"./components/banner/banner"
 import {Body} from"./components/body/body.jsx"
 import React from "react"
 import {Route} from "react-router-dom"
