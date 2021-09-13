@@ -1,1 +1,0 @@
-export const testUser = {usernumber:1,username:"johnkite@gmail.com",userpassword:"soyjohn"}

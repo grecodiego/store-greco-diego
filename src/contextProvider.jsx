@@ -4,6 +4,9 @@ import { getUser } from "./services/user";
 import {sortByNameAZ,sortByNameZA, sortHigherPrice, sortLowerPrice} from "../src/utils/sortsfunctions"
 import { redeem } from "./services/redeem";
 import { getPoints } from "../src/services/coins"
+import {getHistory}from "./services/history"
+import usePagination from './utils/pagination'
+
 export const AppContext = React.createContext();
 
 export default function AppProvider({ children }) {
@@ -12,7 +15,8 @@ export default function AppProvider({ children }) {
     const [userInfo, setUserInfo] = useState([])
     const [open, setOpen] = useState(false)
     const [sortRender, setSortRender] = useState(true)
-
+    const [arrayHistory,setArrayHistory] = useState([])
+    const [homeLink,setHomeLink] = useState(false)
     const handleSortByNameAZ = () => {
         setArrayProducts(sortByNameAZ(arrayProducts))
         setSortRender(!sortRender)
@@ -52,13 +56,34 @@ export default function AppProvider({ children }) {
     const handleSetInfoUser = (user) => {
         setUserInfo(user)
     }
+      
 
+    // PAGINATION
 
+	let [page, setPage] = useState(1);
+	const PER_PAGE = 16;
+	const count = Math.ceil(arrayProducts.length / PER_PAGE);
+	let data = usePagination(arrayProducts, PER_PAGE);
+
+	const handleChange = (p) => {
+		setPage(p);
+		data.jump(p);
+	};
+	const handleChangePrev = () => {
+		data.prev();
+	};	const handleChangeNext = () => {
+		data.next();
+
+	};
+
+    // PAGINATION
 
     useEffect (()=>{getArrayProducts().then((arrayProds)=>setArrayProducts(arrayProds))},[])
     useEffect (()=>{getUser().then((user)=> handleSetInfoUser(user))},[])
-                
-
+    useEffect (()=>{getHistory().then((arrayProds)=>setArrayHistory(arrayProds.reverse()))},[])
+  
+  
+ 
         return (
         <AppContext.Provider value={{ handleReset,
             handleSortByNameAZ, 
@@ -73,6 +98,17 @@ export default function AppProvider({ children }) {
             sortRender,
             setSortRender,
             handleGetPoints,
-            handleReedem}}>{children}</AppContext.Provider>
+            handleReedem,
+            homeLink,
+            setHomeLink,
+            arrayHistory,
+        //PAGINATION
+            data,
+            count,
+            handleChangePrev,
+            handleChangeNext,
+            handleChange
+
+        }}>{children}</AppContext.Provider>
     );
 }

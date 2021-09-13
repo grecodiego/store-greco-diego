@@ -1,6 +1,5 @@
 {
 	"name": "store-greco-diego",
-	"homepage": "http://grecodiego.github.io/store-greco-diego",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {

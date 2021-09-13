@@ -1,7 +1,7 @@
 
-import React,{useState} from "react"
+import React from "react"
 import './navgetpoints.scss'
-import {NavPoints} from "./navspoints/navpoints"
+import {NavPoints} from "../../navspoints/navpoints"
 export function NavGetPoints() {
 
 

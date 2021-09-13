@@ -14,7 +14,7 @@ export function Menu(props) {
 			return buttonNumbers
 	}
 	return <div className='Menu'>
-		<QuantyProducts/>
+		<QuantyProducts currentPage={props.currentPage}/>
 		<h3 className="text-sortBy menu-container">Sort by:</h3>
 		<div className="menu-container-sortbuttons">
 		<SortButton jump={props.jump} textButton={"Sort A~Z"} handle={(e)=>handleSortByNameAZ()}/>

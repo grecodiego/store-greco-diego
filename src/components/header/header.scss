@@ -13,26 +13,3 @@
     justify-content: space-between;
     align-items: center;
 }
-
-.button-getPoints {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    height: 48px;
-    border-radius: 20.5px;
-    background: #EDEDED;
-    margin: 0 20px 0 20px;
-    padding: 0 12px 0 12px;
-    letter-spacing: -0.15px;
-    border: none;
-
-    &:hover {
-        color: #FFFFFF;
-        background: #0AD4FA;
-        transform: scale(1.2);
-        transform: rotateZ(-10deg);
-    }
-
-
-}

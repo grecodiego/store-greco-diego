@@ -1,7 +1,7 @@
 import { BASE_URL, headers } from "./constants"
-export const getHistory = async(productId)=>{
+export const getHistory = async()=>{
     try {
-        const response = await fetch(BASE_URL+"history",{ method:"POST", body:JSON.stringify(body), headers})
+        const response = await fetch(BASE_URL+"user/history",{headers})
             const data = await response.json()
             return data
     } catch (
