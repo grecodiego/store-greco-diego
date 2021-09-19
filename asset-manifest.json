@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/store-greco-diego/static/css/main.04b5d8f1.chunk.css",
-    "main.js": "/store-greco-diego/static/js/main.d8fc26fe.chunk.js",
-    "main.js.map": "/store-greco-diego/static/js/main.d8fc26fe.chunk.js.map",
+    "main.css": "/store-greco-diego/static/css/main.b7f346cf.chunk.css",
+    "main.js": "/store-greco-diego/static/js/main.f70abe66.chunk.js",
+    "main.js.map": "/store-greco-diego/static/js/main.f70abe66.chunk.js.map",
     "runtime-main.js": "/store-greco-diego/static/js/runtime-main.210fd3a8.js",
     "runtime-main.js.map": "/store-greco-diego/static/js/runtime-main.210fd3a8.js.map",
     "static/js/2.a659d072.chunk.js": "/store-greco-diego/static/js/2.a659d072.chunk.js",
     "static/js/2.a659d072.chunk.js.map": "/store-greco-diego/static/js/2.a659d072.chunk.js.map",
     "index.html": "/store-greco-diego/index.html",
-    "static/css/main.04b5d8f1.chunk.css.map": "/store-greco-diego/static/css/main.04b5d8f1.chunk.css.map",
+    "static/css/main.b7f346cf.chunk.css.map": "/store-greco-diego/static/css/main.b7f346cf.chunk.css.map",
     "static/js/2.a659d072.chunk.js.LICENSE.txt": "/store-greco-diego/static/js/2.a659d072.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.210fd3a8.js",
     "static/js/2.a659d072.chunk.js",
-    "static/css/main.04b5d8f1.chunk.css",
-    "static/js/main.d8fc26fe.chunk.js"
+    "static/css/main.b7f346cf.chunk.css",
+    "static/js/main.f70abe66.chunk.js"
   ]
 }
