@@ -4,10 +4,10 @@ import React from "react"
 import { AppContext } from "../../../contextProvider"
 
 export function History() {
-	const {arrayHistory} = React.useContext(AppContext)
+	const {data} = React.useContext(AppContext)
 
 	return <div className='history'>
- 		{arrayHistory.map((product)=>{return <ResultBoxHistory 
+ 		{data.currentData().map((product)=>{return <ResultBoxHistory 
 		key={product.product_id} 
 		id={product.product_id} 
 		name={product.name}

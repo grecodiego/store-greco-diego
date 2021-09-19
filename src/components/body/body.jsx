@@ -2,7 +2,7 @@ import './body.scss'
 import { Menu } from './menu/menu'
 import { QuantyProducts } from '../body/quantyproducts/quantyproducts'
 import { AppContext } from "../../contextProvider"
-import React, {useState} from "react"
+import React from "react"
 import { Router } from "../../router/router.jsx"
 import {ModalReedem} from "./modalredeem/modalsuccess/modalredeem"
 import { ModalError } from './modalredeem/modalerror/modalerror'

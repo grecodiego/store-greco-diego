@@ -66,12 +66,12 @@ export default function AppProvider({ children }) {
     }
       
 
-    // PAGINATION
+    // PAGINATION PRODUCTS TO REDEEM
 
 	let [page, setPage] = useState(1);
 	const PER_PAGE = 16;
 	const count = Math.ceil(arrayProducts.length / PER_PAGE);
-	let data = usePagination(arrayProducts, PER_PAGE);
+	let data = usePagination(homeLink === false? arrayProducts: arrayHistory, PER_PAGE);
 
 	const handleChange = (p) => {
 		setPage(p);
@@ -84,7 +84,7 @@ export default function AppProvider({ children }) {
 
 	};
 
-    // PAGINATION
+    // PAGINATION PRODUCTS TO REDEEM
 
     useEffect (()=>{getArrayProducts().then((arrayProds)=>setArrayProducts(arrayProds))},[])
     useEffect (()=>{getUser().then((user)=> handleSetInfoUser(user))},[])
@@ -122,8 +122,7 @@ export default function AppProvider({ children }) {
             count,
             handleChangePrev,
             handleChangeNext,
-            handleChange
- 
+            handleChange,
 
         }}>{children}</AppContext.Provider>
     );
