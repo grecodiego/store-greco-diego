@@ -15,7 +15,7 @@ export const Router = () => {
 
 	return (
         <div>
-            <Route exact path="/" render={()=>{return <Results />}}/>
-            <Route path="/history" render={()=>handleHistoryRoute()}/>
+            <Route exact path="/store-greco-diego/" exact component={Results} render={()=>{return <Results />}}/>
+            <Route path="/store-greco-diego/history" exact component={History} render={()=>handleHistoryRoute()}/>
         </div>)
 }
