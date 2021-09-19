@@ -15,8 +15,8 @@ export const Router = () => {
 
 	return (
         <div>
-            <Route exact path="/store-greco-diego"  component={Results} exact />
-            <Route path="/store-greco-diego/history"  component={History} exact />
+            <Route exact path="/store-greco-diego"  component={<Results/>} exact />
+            <Route path="/store-greco-diego/history"  component={<History/>} exact />
         </div>)
 }
 /* 
