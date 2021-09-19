@@ -13,12 +13,12 @@ function usePagination(data, itemsPerPage) {
         const pageNumber = Math.max(1, page)
         setCurrentPage((currentPage) => Math.min(pageNumber, maxPage));
     }
-        function currentData() {
+    function currentData() {
         const begin = (currentPage - 1) * itemsPerPage;
         const end = begin + itemsPerPage;
         return data.slice(begin, end);
     }
-        return {next,prev,jump,currentData,currentPage,maxPage}
+    return {next,prev,jump,currentData,currentPage,maxPage}
 }
     export default usePagination
 

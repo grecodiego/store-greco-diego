@@ -5,7 +5,9 @@ import {sortByNameAZ,sortByNameZA, sortHigherPrice, sortLowerPrice} from "../src
 import { redeem } from "./services/redeem";
 import { getPoints } from "../src/services/coins"
 import {getHistory}from "./services/history"
-import usePagination from './utils/pagination'
+import usePagination from './hooks/pagination'
+import useModal from "./hooks/useModal"
+
 
 export const AppContext = React.createContext();
 
@@ -17,6 +19,9 @@ export default function AppProvider({ children }) {
     const [sortRender, setSortRender] = useState(true)
     const [arrayHistory,setArrayHistory] = useState([])
     const [homeLink,setHomeLink] = useState(false)
+	const [isOpenModalReedemSuccess,openModalReedemSuccess,closeModalReedemSuccess] = useModal(false);
+	const [isOpenModalReedemError,openModalReedemError,closeModalReedemSError] = useModal(false)
+
     const handleSortByNameAZ = () => {
         setArrayProducts(sortByNameAZ(arrayProducts))
         setSortRender(!sortRender)
@@ -36,16 +41,19 @@ export default function AppProvider({ children }) {
     const handleReset = () =>{
         getArrayProducts().then((arrayProds)=>setArrayProducts(arrayProds))
     }
-    const handleReedem = (productId, cost) =>{
-        if (cost < userInfo.points) {
-            redeem(productId)
-            let newUserInfo = {...userInfo}
-            newUserInfo.points = userInfo.points - cost
-            setUserInfo(newUserInfo)
-        }
-        else {
-            window.alert("No tienes los puntos suficientes")
-        }
+    function handleReedem (productId, cost){
+            if (cost < userInfo.points) {
+  
+                redeem(productId)
+                let newUserInfo = {...userInfo}
+                newUserInfo.points = userInfo.points - cost
+                setUserInfo(newUserInfo)
+                openModalReedemSuccess()
+                    }
+            else {
+                openModalReedemError()
+            }
+
     }
     const handleGetPoints = (quanty) => {
         getPoints(quanty)
@@ -102,12 +110,20 @@ export default function AppProvider({ children }) {
             homeLink,
             setHomeLink,
             arrayHistory,
+            isOpenModalReedemSuccess,
+            openModalReedemSuccess,
+            closeModalReedemSuccess,
+            isOpenModalReedemError,
+            openModalReedemError,
+            closeModalReedemSError,
+
         //PAGINATION
             data,
             count,
             handleChangePrev,
             handleChangeNext,
             handleChange
+ 
 
         }}>{children}</AppContext.Provider>
     );

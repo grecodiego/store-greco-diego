@@ -6,6 +6,7 @@ export function ResultBox(props) {
 	const [onHover, setOnHover] = useState(false)
 	const {userInfo,handleReedem} = React.useContext(AppContext)
 
+
 	function calcBuyHover (productCost,points) {
 		if (productCost>points){
 			return(<div>Te faltan {(points-props.cost)*-1}<img src="./images/icons/coin.svg" alt="coin" /> </div>)}
@@ -21,7 +22,8 @@ export function ResultBox(props) {
 			return <img className={`buy-icon-position`} src="./images/icons/buy-blue.svg" alt="buy blue" />
 	
 	}}
-	
+
+
 	return 	<div className={`resultbox ${onHover===true ? "resultbox-hover" : "resultbox-normal"}`}onMouseOver={()=>setOnHover(true)}onMouseOut={()=>setOnHover(false)}>
 				<div className="container-img"><img src={props.img} alt="" /></div>
 				<div className="container-text">
@@ -32,7 +34,9 @@ export function ResultBox(props) {
 				
 				<div className={`resultbox-blue ${onHover===true ? "resultbox-blue-hover" : "resultbox-blue-normal"}`}>
 					<div className="money-quanty">{calcBuyHover(props.cost, userInfo.points)}			</div>
-					<button className="button-redeem" onClick={(e)=>handleReedem(props.id, props.cost)}>Redeem now</button>
+					<button className="button-redeem" onClick={(e)=>handleReedem(props.id,props.cost)}>Redeem now</button>
+					
 				</div>
-	</div>
+
+	</div> 
 }

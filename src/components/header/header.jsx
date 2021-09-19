@@ -7,7 +7,7 @@ import { AppContext } from "../../contextProvider"
 import {Link} from "react-router-dom"
 import React from "react"
 export function Header() {
-	const {open,homeLink,setHomeLink,handleHistory} = React.useContext(AppContext)
+	const {open,homeLink,setHomeLink} = React.useContext(AppContext)
 	return <div className='header'>
 	<img src='./images/body/aerolab-logo.svg' alt='logo-lab'width="36px"/>	
 	<div className="user-info">
