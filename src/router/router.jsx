@@ -7,13 +7,12 @@ import React from 'react'
 export const Router = () => {
 	return (
         <Switch>
-            <Route exact path="store-greco-diego/"  component={Results}> 
+            <Route exact path="store-greco-diego/"> 
                 <Results/>
             </Route>
-            <Route path="store-greco-diego/history/"  component={History}> 
+            <Route path="store-greco-diego/history/"> 
                 <History/>
             </Route>
-
         </Switch>)
 }
 
