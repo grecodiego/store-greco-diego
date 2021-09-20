@@ -8,10 +8,10 @@ export const Router = () => {
 	return (
         <Switch>
             <Route exact path="store-greco-diego/"> 
-                <Results/>
+                {render(<Results/>)}
             </Route>
             <Route path="store-greco-diego/history/"> 
-                <History/>
+                {render( <History/>)}
             </Route>
         </Switch>)
 }
