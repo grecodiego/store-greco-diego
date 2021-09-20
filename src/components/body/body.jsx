@@ -9,7 +9,6 @@ import { ModalError } from './modalredeem/modalerror/modalerror'
 
 export function Body() {
 	const {data,count,handleChangePrev,handleChangeNext,handleChange,closeModalReedemSuccess,isOpenModalReedemSuccess,isOpenModalReedemError,closeModalReedemSError} = React.useContext(AppContext)
-	console.log("soy isOpen blabla " +isOpenModalReedemSuccess)
 	return <div className='body'>
         <Menu  currentPage={data.currentPage} count={count} prev={handleChangePrev} next={handleChangeNext} jump={handleChange}/>
 		<Router/>

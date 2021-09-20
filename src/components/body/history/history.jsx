@@ -4,7 +4,8 @@ import React from "react"
 import { AppContext } from "../../../contextProvider"
 
 export function History() {
-	const {data} = React.useContext(AppContext)
+	const {data,setHomeLink} = React.useContext(AppContext)
+  setHomeLink(true)
 
 	return <div className='history'>
  		{data.currentData().map((product)=>{return <ResultBoxHistory 

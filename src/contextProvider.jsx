@@ -44,14 +44,13 @@ export default function AppProvider({ children }) {
     function handleReedem (productId, cost){
             if (cost < userInfo.points) {
   
-                redeem(productId)
+                redeem(productId, openModalReedemSuccess,openModalReedemError)
                 let newUserInfo = {...userInfo}
                 newUserInfo.points = userInfo.points - cost
                 setUserInfo(newUserInfo)
-                openModalReedemSuccess()
                     }
             else {
-                openModalReedemError()
+                window.alert("No tienes los puntos suficientes")
             }
 
     }
