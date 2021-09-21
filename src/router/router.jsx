@@ -7,10 +7,10 @@ export const Routes = () => {
 	return (
         <Router>
             <Switch>
-                <Route exact path="store-greco-diego/" > 
+                <Route exact path="/store-greco-diego" > 
                     <Results/>
                 </Route>
-                <Route path="store-greco-diego/history/" > 
+                <Route path="/store-greco-diego/history" > 
                     <History/>
                 </Route>
             </Switch>
