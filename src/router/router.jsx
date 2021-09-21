@@ -1,5 +1,5 @@
 
-import {Switch,Route} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import {Results} from "../components/body/results/results"
 import {History} from "../components/body/history/history"
 
