@@ -41,11 +41,12 @@ export default function AppProvider({ children }) {
     const handleReset = () =>{
         getArrayProducts().then((arrayProds)=>setArrayProducts(arrayProds))
     }
+    let newUserInfo = {}
     function handleReedem (productId, cost){
             if (cost < userInfo.points) {
   
                 redeem(productId, openModalReedemSuccess,openModalReedemError)
-                let newUserInfo = {...userInfo}
+                newUserInfo = {...userInfo}
                 newUserInfo.points = userInfo.points - cost
                 setUserInfo(newUserInfo)
                     }
