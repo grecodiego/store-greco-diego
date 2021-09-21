@@ -87,7 +87,7 @@ export default function AppProvider({ children }) {
 
     useEffect (()=>{getArrayProducts().then((arrayProds)=>setArrayProducts(arrayProds))},[])
     useEffect (()=>{getUser().then((user)=> handleSetInfoUser(user))},[])
-    useEffect (()=>{getHistory().then((arrayProds)=>setArrayHistory(arrayProds.reverse()))},[homeLink])
+    useEffect (()=>{getHistory().then((arrayProds)=>setArrayHistory(arrayProds.reverse()))},[newUserInfo])
   
   
  
