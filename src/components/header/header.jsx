@@ -14,8 +14,8 @@ export function Header() {
 		<ButtonPoints/>
 		{open === true ? <NavGetPoints/>: null}
 		{homeLink === false ?
-			<Link  style={{ textDecoration: 'none' }} to={"/history"}><LinkButton name={"History"} handle={(e)=>setHomeLink(true)}/></Link>: 
-			<Link  style={{ textDecoration: 'none' }} to={"/"}><LinkButton name={"Home"} handle={(e)=>setHomeLink(false)}/></Link>}
+			<Link  style={{ textDecoration: 'none' }} to={"/store-greco-diego/history"}><LinkButton name={"History"} handle={(e)=>setHomeLink(true)}/></Link>: 
+			<Link  style={{ textDecoration: 'none' }} to={"/store-greco-diego/"}><LinkButton name={"Home"} handle={(e)=>setHomeLink(false)}/></Link>}
 		<BoxUser/>
 		</div>
 	</div>

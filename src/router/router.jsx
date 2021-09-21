@@ -1,11 +1,10 @@
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Route, Switch } from 'react-router-dom'
 import {Results} from "../components/body/results/results"
 import {History} from "../components/body/history/history"
 
-export const Routes = () => {
+export const Router = () => {
 	return (
-        <Router>
             <Switch>
                 <Route exact path="/store-greco-diego" > 
                     <Results/>
@@ -14,7 +13,7 @@ export const Routes = () => {
                     <History/>
                 </Route>
             </Switch>
-        </Router>)
+            )
 }
 
 
