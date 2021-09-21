@@ -2,6 +2,7 @@
 import { BrowserRouter as Route, Switch } from 'react-router-dom'
 import {Results} from "../components/body/results/results"
 import {History} from "../components/body/history/history"
+import {NotFound} from "../components/body/notfound/notfound"
 
 export const Router = () => {
 	return (
@@ -12,6 +13,9 @@ export const Router = () => {
                 <Route path="/store-greco-diego/history" > 
                     <History/>
                 </Route>
+                <Route path="*">
+                    <NotFound />
+                 </Route>
             </Switch>
             )
 }
