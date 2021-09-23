@@ -43,7 +43,7 @@ export default function AppProvider({ children }) {
     }
     let newUserInfo = {}
     function handleReedem (productId, cost){
-            if (cost < userInfo.points) {
+            if (cost <= userInfo.points) {
   
                 redeem(productId, openModalReedemSuccess,openModalReedemError)
                 newUserInfo = {...userInfo}
